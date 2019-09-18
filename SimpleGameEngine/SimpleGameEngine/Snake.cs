@@ -93,11 +93,7 @@ public class Snake{
             the segments List.
         */
         int lastSegment;
-        for(int i = 0; i < segments.Count; i++)
-        {
-            lastSegment = segments.Count - (segments.Count - 1);
-        }
-
+        lastSegment = segments.Count - (segments.Count - 1);
     }
 
     public void UpdateSegments(){
