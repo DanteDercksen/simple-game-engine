@@ -92,8 +92,11 @@ public class Snake{
             3. use the segments.Add method to add the newSegment to the back of
             the segments List.
         */
-        int lastSegment;
-        lastSegment = segments.Count - (segments.Count - 1);
+
+        SnakeSegment lastSegment = segments[segments.Count - 1];
+        SnakeSegment newSegment = new SnakeSegment(lastSegment.PrevX, lastSegment.PrevY, 'o');
+        segments.Add(newSegment);
+
     }
 
     public void UpdateSegments(){
@@ -113,6 +116,13 @@ public class Snake{
             You can use the segments.Count property to loop through
             the List of snake segments.  
         */
+        for(int y = 0; y < segments.Count; y++)
+        {
+            for(int x = 0; x < segments.Count; x++)
+            {
+                
+            }
+        }        
     }
 
     public bool IsHeadTouchingBody(){
