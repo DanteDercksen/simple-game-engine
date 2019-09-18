@@ -9,21 +9,28 @@ public class SnakeSegment{
     public SnakeSegment(int x, int y, char character){
         /*  ------------------------------------------
             1.1
-            ------------------------------------------   
+            ------------------------------------------ 
             Initialize the x, y and character fields 
             using the values passed to the constructor
         */
+
+        this.x = x;
+        this.y = y;
+        this.character = character;
     }
 
     public int X {
         get {return x;}
-        set {
+        set
+        {
             /*  ------------------------------------------
                 1.2
                 ------------------------------------------
                 Before overwriting x with the new value,
                 set prevX to the current value of x
             */
+            prevX = x;
+            x = value;
         }
     }
 
@@ -36,6 +43,8 @@ public class SnakeSegment{
                 Before overwriting y with the new value,
                 set prevY to the current value of y
             */
+            prevY = y;
+            y = value;
         }
     }
 

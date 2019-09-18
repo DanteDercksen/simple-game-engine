@@ -24,6 +24,9 @@ public class Snake{
             Initialize the x, y and speed fields 
             using the values passed to the constructor
         */
+        this.x = x;
+        this.y = y;
+        this.speed = speed;
 
         
         /*  Adds a segment to the segments List
@@ -47,10 +50,13 @@ public class Snake{
             down to the nearest whole number. 
             We still have to cast it to an int */
         get {return (int) Math.Floor(x);}
+        set { x = Convert.ToInt32(x); x = value; }
+        
     }
 
     public int Y {
         get {return (int) Math.Floor(y);}
+        set { y = Convert.ToInt32(y); y = value; }
     }
 
     public double Speed {
@@ -86,6 +92,12 @@ public class Snake{
             3. use the segments.Add method to add the newSegment to the back of
             the segments List.
         */
+        int lastSegment;
+        for(int i = 0; i < segments.Count; i++)
+        {
+            lastSegment = segments.Count - (segments.Count - 1);
+        }
+
     }
 
     public void UpdateSegments(){
